@@ -49,6 +49,83 @@
     <div id="main">
       
   
+    <article id="post-Setting-up-a-Hexo-Blog-hosted-on-GitHub-Pages" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2014/09/17/Setting-up-a-Hexo-Blog-hosted-on-GitHub-Pages/" class="article-date">
+  <time datetime="2014-09-18T01:36:13.000Z" itemprop="datePublished">Sep 17 2014</time>
+</a>
+		</span>
+		<span class="meta-elements author">Marc Windle</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2014/09/17/Setting-up-a-Hexo-Blog-hosted-on-GitHub-Pages/">Setting up a Free Blog with Hexo and GitHub Pages</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>To start things off, I thought I’d give some insight into how I setup this blog using freely available software and hosting. I did pay for my domain name, but you don’t need to if you’re okay with hosting at <u><i>username</i>.github.io</u>. </p>
+<p><a href="http://hexo.io" title="Hexo" target="_blank" rel="external">Hexo</a> is <i>“A fast, simple &amp; powerful blog framework, powered by Node.js”</i>. Honestly, I hadn’t heard of it before I started looking around for a freely hosted blog, but I liked its simplicity, Node.js-ness, and ability to customize. </p>
+<p>Hexo is just a blogging software, you’ll still need to host it somewhere. This is where <a href="https://pages.github.com" title="GitHub Pages" target="_blank" rel="external">GitHub Pages</a> comes in. GitHub will host your website from a specially named GitHub repository for free. Pretty cool. </p>
+<p>Here’s how I put these two things together to get this blog up and running. </p>
+<h3 id="Setup_your_GitHub_Pages_Repository">Setup your GitHub Pages Repository</h3>
+<p>In order to get things started, you’ll need to create a GitHub account if you don’t have one already. They’re free, you can sign up at <a href="https://github.com/" title="GitHub" target="_blank" rel="external">github.com</a>.</p>
+<p>Follow the first couple of steps from the <a href="https://pages.github.com" title="GitHub Pages" target="_blank" rel="external">GitHub Pages</a> instructions to create and clone your repository. After you’ve cloned it, you don’t need to put anything in it just yet, we’ll take care of that using Hexo. </p>
+<h3 id="Download_and_Setup_Hexo_Locally">Download and Setup Hexo Locally</h3>
+<p>The <a href="http://hexo.io/docs/" title="Hexo Documentation" target="_blank" rel="external">Hexo Documentation</a> provides installation instructions, and you should check them out if you run into any issues here. The key pre-requisite is that you’ll need to have <a href="http://nodejs.org" title="Node.js" target="_blank" rel="external">Node.js</a> and <a href="http://git-scm.com" title="Git" target="_blank" rel="external">Git</a> installed if you don’t already. Then, simply install Hexo with npm (Node Package Manager). </p>
+<figure class="highlight bash"><pre><div class="line">$ npm install -g hexo</div></pre></figure>
+
+<p>Once you have Hexo installed, change to the directory where you cloned your GitHub Pages repository and initialize your Hexo blog.</p>
+<figure class="highlight bash"><pre><div class="line">$ <span class="built_in">cd</span> ../path/to/githubpages/repository...</div><div class="line">$ hexo init</div><div class="line">$ npm install</div></pre></figure>
+
+
+<p>At this point, you should have an empty blog ready to go in here. Start the Hexo server</p>
+<figure class="highlight bash"><pre><div class="line">$ hexo server</div></pre></figure>
+
+<p>then visit <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> to check it out. You should see a mostly empty blog site with the default theme and a single, <i>Hello World</i> post. </p>
+<h3 id="Deploying_your_site_to_GitHub_Pages">Deploying your site to GitHub Pages</h3>
+<p>I’m going to skip over the details of writing posts and customizing your Hexo site for now, but check out the <a href="http://hexo.io/docs/" title="Hexo Documentation" target="_blank" rel="external">Hexo Documentation</a> for more details on how to do this.</p>
+<p>With the local site looking the way you want it to, you’ll want to publish it to GitHub pages for everyone to see. Hexo makes this super easy. </p>
+<p>Firstly, edit the <i>deploy</i> configuration in the <code>_config.yml</code> file located in the root of your project. </p>
+<figure class="highlight"><pre><div class="line">deploy:</div><div class="line">    <span class="keyword">type</span>: github</div><div class="line">    repo: https:<span class="comment">//github.com/username/username.github.io.git</span></div><div class="line">    branch: master</div><div class="line">    <span class="keyword">message</span>: [<span class="keyword">message</span>]</div></pre></figure>
+
+<p>Then, let Hexo do the heavy-lifting for the deployment to GitHub Pages for you. </p>
+<figure class="highlight bash"><pre><div class="line">$ hexo deploy</div></pre></figure>
+
+<p>Done! You should now be able to see your site at <u>//username.github.io</u>. Note that it may take up to ten minutes the first time you visit the site for it to become available. This delay will only happen the first time while GitHub creates CNAME DNS records to route your user-specific domain name. </p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github-pages/">github pages</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-Hello-World-0" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
