@@ -96,8 +96,8 @@
 <p>Firstly, edit the <i>deploy</i> configuration in the <code>_config.yml</code> file located in the root of your project. </p>
 <figure class="highlight"><pre><div class="line">deploy:</div><div class="line">    <span class="keyword">type</span>: github</div><div class="line">    repo: https:<span class="comment">//github.com/username/username.github.io.git</span></div><div class="line">    branch: master</div><div class="line">    <span class="keyword">message</span>: [<span class="keyword">message</span>]</div></pre></figure>
 
-<p>Then, let Hexo do the heavy-lifting for the deployment to GitHub Pages for you. </p>
-<figure class="highlight bash"><pre><div class="line">$ hexo deploy</div></pre></figure>
+<p>Then, let Hexo do the heavy-lifting for the static site generation and deployment to GitHub Pages for you. </p>
+<figure class="highlight bash"><pre><div class="line">$ hexo generate</div><div class="line">$ hexo deploy</div></pre></figure>
 
 <p>Done! You should now be able to see your site at <u>//username.github.io</u>. Note that it may take up to ten minutes the first time you visit the site for it to become available. This delay will only happen the first time while GitHub creates CNAME DNS records to route your user-specific domain name. </p>
 
